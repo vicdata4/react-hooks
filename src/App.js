@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import StateExample from './components/state-hook.js';
+import StateHook from './components/state-hook.js';
+import EffectHook from './components/effect-hook.js';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         >
           Learn React
         </a>
-      <StateExample />
+      <StateHook />
+      <EffectHook />
       </header>
     </div>
   );

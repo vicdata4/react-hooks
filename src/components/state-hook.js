@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function StateExample() {
+function StateHook() {
   // Declara una nueva variable de estado, que llamaremos "count".
   const [count, setCount] = useState(0);
 
@@ -15,4 +15,4 @@ function StateExample() {
 }
 
 
-export default StateExample;
+export default StateHook;
