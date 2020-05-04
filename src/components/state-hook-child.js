@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function StateHookChild(props) {
 
@@ -9,6 +9,11 @@ function StateHookChild(props) {
   function dispatchEvent(){
     props.onChildSubmit(`Hello parent, your current value is ${props.count}`);
   }
+
+  useEffect(() => {
+    // Actualiza el título del documento usando la Browser API
+    console.log(`The parent property has changed. New value: ${props.count}`);
+  }, [props.count]);
 
   return (
     <div>
