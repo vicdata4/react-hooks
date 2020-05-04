@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Hooks documentation
+
+https://reactjs.org/docs/hooks-reference.html
+
 ## Available Scripts
 
 In the project directory, you can run:
