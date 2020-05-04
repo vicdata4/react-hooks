@@ -15,6 +15,10 @@ function StateHookChild(props) {
   useEffect(() => {
     // Actualiza el título del documento usando la Browser API
     console.log(`The parent property has changed. New value: ${props.count}`);
+
+    return () => {
+        console.log(`Clean up function: Removed State hook component from UI`);
+    };
   }, [props.count]);
 
   return (

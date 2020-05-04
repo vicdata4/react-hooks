@@ -3,6 +3,7 @@ import StateHookChild from './state-hook-child.js';
 
 function StateHook() {
   const [count, setCount] = useState(0);
+  const [renderChild, setRenderChild] = useState(true);
   const [currentTime, setCurrentTime] = useState(Date.now());
 
   function onChildSubmit(e) {
@@ -29,7 +30,10 @@ function StateHook() {
         Update current time
       </button>
       <p>Current time: {getCurrentTime()}</p>
-      <StateHookChild count={count} onChildSubmit={onChildSubmit} />
+      <button onClick={() => setRenderChild(!renderChild)}>
+        Set render child flag
+      </button>
+      {renderChild ? <StateHookChild count={count} onChildSubmit={onChildSubmit} /> : ''}
       {renderHtmlTag()}
     </div>
   );
