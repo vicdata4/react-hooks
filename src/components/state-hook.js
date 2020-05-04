@@ -14,6 +14,12 @@ function StateHook() {
     return `${new Date(currentTime)}`;
   }
 
+  function renderHtmlTag() {
+    return (
+      <div className="html-tag">This is an HTML tag</div>
+    );
+  }
+
   return (
     <div>
       <p>You clicked {count} times</p>
@@ -25,6 +31,7 @@ function StateHook() {
       </button>
       <p>Current time: {getCurrentTime()}</p>
       <StateHookChild count={count} onChildSubmit={onChildSubmit} />
+      {renderHtmlTag()}
     </div>
   );
 }
