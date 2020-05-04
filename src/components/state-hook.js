@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import StateHookChild from './state-hook-child.js';
 
 function StateHook() {
   // Declara una nueva variable de estado, que llamaremos "count".
@@ -10,6 +11,7 @@ function StateHook() {
       <button onClick={() => setCount(count + 1)}>
         Click me
       </button>
+      <StateHookChild count={count} />
     </div>
   );
 }
