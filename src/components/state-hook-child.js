@@ -1,6 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
+import { ThemeContext } from '../App.js';
 
 function StateHookChild(props) {
+  const theme = useContext(ThemeContext);
 
   const showAlert = () => {
     alert(`My parent value is ${props.count}`);
@@ -18,7 +20,7 @@ function StateHookChild(props) {
   return (
     <div>
       <p>I'm State-hook child</p>
-      <button onClick={() => showAlert()}>Show parent value</button>
+      <button onClick={() => showAlert()} style={{ background: theme.background, color: theme.foreground }}>Show parent value</button>
       <button onClick={() => dispatchEvent()}>Dispatch event</button>
     </div>
   );

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import StateHookChild from './state-hook-child.js';
 
 function StateHook() {
-  // Declara una nueva variable de estado, que llamaremos "count".
   const [count, setCount] = useState(0);
   const [currentTime, setCurrentTime] = useState(Date.now());
 
